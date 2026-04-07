@@ -1,0 +1,28 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model Lesson {
+  id        Int      @id @default(autoincrement())
+  name      String
+  createdAt DateTime @default(now())
+  words     Word[]
+}
+
+model Word {
+  id           Int      @id @default(autoincrement())
+  english      String
+  vietnamese   String
+  phonetic     String?
+  audioUrl     String?
+  partOfSpeech String?
+  description  String?
+  createdAt    DateTime @default(now())
+  lesson       Lesson   @relation(fields: [lessonId], references: [id], onDelete: Cascade)
+  lessonId     Int
+}
