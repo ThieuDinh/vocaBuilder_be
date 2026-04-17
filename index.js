@@ -204,6 +204,18 @@ app.get('/api/exercises', async (req, res) => {
       recentAnswers.push(w.english);
       if (recentAnswers.length > 5) recentAnswers.shift();
     });
+  } else if (type === 'word_typing') {
+    shuffledWords.forEach(w => {
+      exercises.push({
+        type: 'word_typing',
+        question: `Hãy nhập từ tiếng Anh có nghĩa là: "${w.vietnamese}"`,
+        answer: w.english,
+        phonetic: w.phonetic,
+        audioUrl: w.audioUrl,
+        partOfSpeech: w.partOfSpeech,
+        vietnamese: w.vietnamese
+      });
+    });
   } else if (type === 'matching') {
     for (let i = 0; i < shuffledWords.length; i += 4) {
       const chunk = shuffledWords.slice(i, i + 4);
@@ -229,6 +241,34 @@ app.get('/api/exercises', async (req, res) => {
   }
 
   res.json(exercises.slice(0, 100));
+});
+
+// Delete Lesson API
+app.delete('/api/lessons/:id', async (req, res) => {
+  const { id } = req.params;
+  try {
+    await prisma.lesson.delete({
+      where: { id: parseInt(id) }
+    });
+    res.json({ message: 'Lesson deleted successfully' });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Server error' });
+  }
+});
+
+// Delete Word API
+app.delete('/api/words/:id', async (req, res) => {
+  const { id } = req.params;
+  try {
+    await prisma.word.delete({
+      where: { id: parseInt(id) }
+    });
+    res.json({ message: 'Word deleted successfully' });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Server error' });
+  }
 });
 
 const PORT = process.env.PORT || 3000;
