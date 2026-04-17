@@ -131,7 +131,16 @@ app.get('/api/words', async (req, res) => {
 // Get Exercises API
 app.get('/api/exercises', async (req, res) => {
   const { lessonId, type } = req.query;
-  const filter = lessonId ? { lessonId: parseInt(lessonId) } : {};
+  
+  // Handle single or multiple lessonIds
+  let filter = {};
+  if (lessonId) {
+    const ids = lessonId.toString().split(',').map(id => parseInt(id)).filter(id => !isNaN(id));
+    if (ids.length > 0) {
+      filter = { lessonId: { in: ids } };
+    }
+  }
+
   const words = await prisma.word.findMany({ where: filter });
   
   if (words.length < 4) {
@@ -139,45 +148,61 @@ app.get('/api/exercises', async (req, res) => {
   }
 
   // Shuffle function
-  const shuffle = (array) => array.sort(() => 0.5 - Math.random());
+  const shuffle = (array) => [...array].sort(() => 0.5 - Math.random());
+
+  // Advanced Distractor logic
+  const getSmartDistractors = (targetWord, allWords, recentAnswers) => {
+    let candidates = allWords.filter(x => x.id !== targetWord.id);
+    let filteredCandidates = candidates.filter(x => !recentAnswers.includes(x.english));
+    
+    // Ensure we have at least 3 candidates. If temporal filter is too strict, ignore it.
+    const pool = filteredCandidates.length >= 3 ? filteredCandidates : candidates;
+    
+    // Priority: Same Part of Speech
+    let samePOS = pool.filter(x => x.partOfSpeech === targetWord.partOfSpeech);
+    let differentPOS = pool.filter(x => x.partOfSpeech !== targetWord.partOfSpeech);
+    
+    let selected = shuffle(samePOS).slice(0, 3);
+    if (selected.length < 3) {
+      const remaining = 3 - selected.length;
+      selected = [...selected, ...shuffle(differentPOS).slice(0, remaining)];
+    }
+    
+    return selected.map(x => x.english);
+  };
 
   const exercises = [];
   const shuffledWords = shuffle([...words]);
+  const recentAnswers = []; // History for temporal separation (size 5)
 
-  if (type === 'vietnamese_to_word') {
+  if (type === 'vietnamese_to_word' || type === 'kahoot' || type === 'description_to_word') {
     shuffledWords.forEach(w => {
-      const options = shuffle([
-        w.english,
-        ...shuffle(words.filter(x => x.id !== w.id)).slice(0, 3).map(x => x.english)
-      ]);
-      const posTag = w.partOfSpeech ? `(${w.partOfSpeech}) ` : '';
+      const wrongOptions = getSmartDistractors(w, words, recentAnswers);
+      const options = shuffle([w.english, ...wrongOptions]);
+      
+      let question = '';
+      if (type === 'description_to_word') {
+        const blankedDescription = (w.description || '').replace(new RegExp(w.english, 'gi'), '_____');
+        const posTag = w.partOfSpeech ? `(${w.partOfSpeech}) ` : '';
+        question = `Đoán từ ${posTag}qua mô tả: "${blankedDescription}"`;
+      } else {
+        question = `Nghĩa của từ này là gì: "${w.vietnamese}"?`;
+      }
+
       exercises.push({
-        type: 'vietnamese_to_word',
-        question: `Đoán từ vựng ${posTag}có nghĩa là: "${w.vietnamese}"`,
+        type: type,
+        question: question,
         options: options,
         answer: w.english,
         phonetic: w.phonetic,
         audioUrl: w.audioUrl,
-        partOfSpeech: w.partOfSpeech
+        partOfSpeech: w.partOfSpeech,
+        vietnamese: w.vietnamese
       });
-    });
-  } else if (type === 'description_to_word') {
-    shuffledWords.forEach(w => {
-      const options = shuffle([
-        w.english,
-        ...shuffle(words.filter(x => x.id !== w.id)).slice(0, 3).map(x => x.english)
-      ]);
-      const blankedDescription = (w.description || '').replace(new RegExp(w.english, 'gi'), '_____');
-      const posTag = w.partOfSpeech ? `(${w.partOfSpeech}) ` : '';
-      exercises.push({
-        type: 'description_to_word',
-        question: `Đoán từ ${posTag}qua mô tả: "${blankedDescription}"`,
-        options: options,
-        answer: w.english,
-        phonetic: w.phonetic,
-        audioUrl: w.audioUrl,
-        partOfSpeech: w.partOfSpeech
-      });
+
+      // Update history
+      recentAnswers.push(w.english);
+      if (recentAnswers.length > 5) recentAnswers.shift();
     });
   } else if (type === 'matching') {
     for (let i = 0; i < shuffledWords.length; i += 4) {
@@ -203,7 +228,7 @@ app.get('/api/exercises', async (req, res) => {
     return res.status(400).json({ error: 'Loại bài tập không hợp lệ.' });
   }
 
-  res.json(exercises.slice(0, 15));
+  res.json(exercises.slice(0, 100));
 });
 
 const PORT = process.env.PORT || 3000;

@@ -1,0 +1,478 @@
+[
+  {
+    "id": 1,
+    "name": "Ti",
+    "createdAt": "2026-04-02T17:44:50.934Z",
+    "words": [
+      {
+        "id": 1,
+        "english": "well",
+        "vietnamese": "Tốt",
+        "phonetic": "/wɛl/",
+        "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/well-uk.mp3",
+        "partOfSpeech": "adverb",
+        "description": "(manner) Accurately, competently, satisfactorily.",
+        "createdAt": "2026-04-02T17:46:28.121Z",
+        "lessonId": 1
+      },
+      {
+        "id": 2,
+        "english": "good",
+        "vietnamese": "Tốt",
+        "phonetic": "/ɡʊ(d)/",
+        "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/good-uk.mp3",
+        "partOfSpeech": "adjective",
+        "description": "(of people)",
+        "createdAt": "2026-04-02T17:47:40.748Z",
+        "lessonId": 1
+      },
+      {
+        "id": 3,
+        "english": "bad",
+        "vietnamese": "xấu",
+        "phonetic": "/bæːd/",
+        "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/bad-uk.mp3",
+        "partOfSpeech": "noun",
+        "description": "Error, mistake.",
+        "createdAt": "2026-04-02T17:48:02.396Z",
+        "lessonId": 1
+      },
+      {
+        "id": 4,
+        "english": "book",
+        "vietnamese": "sách",
+        "phonetic": "/buːk/",
+        "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/book-uk.mp3",
+        "partOfSpeech": "noun",
+        "description": "A collection of sheets of paper bound together to hinge at one edge, containing printed or written material, pictures, etc.",
+        "createdAt": "2026-04-02T17:48:31.107Z",
+        "lessonId": 1
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Listening part 1",
+    "createdAt": "2026-04-02T17:50:22.302Z",
+    "words": [
+      {
+        "id": 5,
+        "english": "walkway",
+        "vietnamese": "lối đi",
+        "phonetic": "/ˈwɔːkˌweɪ/",
+        "audioUrl": "",
+        "partOfSpeech": "noun",
+        "description": "A clearly defined path for pedestrians.",
+        "createdAt": "2026-04-02T17:50:43.068Z",
+        "lessonId": 2
+      },
+      {
+        "id": 6,
+        "english": "sidewalk",
+        "vietnamese": "vỉa hè",
+        "phonetic": "/ˈsaɪdwɔːk/",
+        "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/sidewalk-us.mp3",
+        "partOfSpeech": "noun",
+        "description": "A footpath, usually paved, at the side of a road for the use of pedestrians; a pavement (UK) or footpath (Australia, New Zealand)",
+        "createdAt": "2026-04-02T17:50:50.951Z",
+        "lessonId": 2
+      },
+      {
+        "id": 7,
+        "english": "pavement",
+        "vietnamese": "vỉa hè",
+        "phonetic": "/ˈpeɪvmənt/",
+        "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/pavement-uk.mp3",
+        "partOfSpeech": "noun",
+        "description": "(now chiefly in technical contexts) A paved surface; a hard covering on the ground.",
+        "createdAt": "2026-04-02T17:51:00.502Z",
+        "lessonId": 2
+      },
+      {
+        "id": 8,
+        "english": "parking lot",
+        "vietnamese": "bãi đậu xe",
+        "phonetic": "",
+        "audioUrl": "",
+        "partOfSpeech": "noun",
+        "description": "An open area, generally paved, where automobiles may be left when not in use.",
+        "createdAt": "2026-04-02T17:51:10.357Z",
+        "lessonId": 2
+      },
+      {
+        "id": 9,
+        "english": "parking garage",
+        "vietnamese": "nhà để xe",
+        "phonetic": "",
+        "audioUrl": "",
+        "partOfSpeech": "noun",
+        "description": "A building for vehicles to park in, typically with several floors and sometimes underground.",
+        "createdAt": "2026-04-02T17:51:23.350Z",
+        "lessonId": 2
+      },
+      {
+        "id": 10,
+        "english": "patio",
+        "vietnamese": "hiên nhà",
+        "phonetic": "/ˈpæti.əʊ/",
+        "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/patio-us.mp3",
+        "partOfSpeech": "noun",
+        "description": "A paved outside area, adjoining a house, used for dining or recreation.",
+        "createdAt": "2026-04-02T17:51:31.952Z",
+        "lessonId": 2
+      },
+      {
+        "id": 11,
+        "english": "cafeteria",
+        "vietnamese": "quán ăn tự phục vụ",
+        "phonetic": "",
+        "audioUrl": "",
+        "partOfSpeech": "noun",
+        "description": "A restaurant in which customers select their food at a counter then carry it on a tray to a table to eat",
+        "createdAt": "2026-04-02T17:51:41.549Z",
+        "lessonId": 2
+      },
+      {
+        "id": 12,
+        "english": "stack",
+        "vietnamese": "chồng",
+        "phonetic": "/stæk/",
+        "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/stack-au.mp3",
+        "partOfSpeech": "noun",
+        "description": "(heading) A pile.",
+        "createdAt": "2026-04-02T17:51:54.925Z",
+        "lessonId": 2
+      },
+      {
+        "id": 13,
+        "english": "pile",
+        "vietnamese": "đống",
+        "phonetic": "/paɪl/",
+        "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/pile-us.mp3",
+        "partOfSpeech": "noun",
+        "description": "A mass of things heaped together; a heap.",
+        "createdAt": "2026-04-02T17:52:02.523Z",
+        "lessonId": 2
+      },
+      {
+        "id": 14,
+        "english": "line up",
+        "vietnamese": "xếp hàng",
+        "phonetic": "/laɪn.ˈʌp/",
+        "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/line%20up-ca.mp3",
+        "partOfSpeech": "verb",
+        "description": "To put in alignment; to put in correct adjustment for smooth running",
+        "createdAt": "2026-04-02T17:52:16.326Z",
+        "lessonId": 2
+      },
+      {
+        "id": 15,
+        "english": "bulb",
+        "vietnamese": "bóng đèn",
+        "phonetic": "/bʌlb/",
+        "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/bulb-us.mp3",
+        "partOfSpeech": "noun",
+        "description": "Any solid object rounded at one end and tapering on the other, possibly attached to a larger object at the tapered end.",
+        "createdAt": "2026-04-02T17:52:25.016Z",
+        "lessonId": 2
+      },
+      {
+        "id": 16,
+        "english": "hang",
+        "vietnamese": "treo",
+        "phonetic": "[heɪŋ]",
+        "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/hang-us.mp3",
+        "partOfSpeech": "verb",
+        "description": "To be or remain suspended.",
+        "createdAt": "2026-04-02T17:52:34.264Z",
+        "lessonId": 2
+      },
+      {
+        "id": 17,
+        "english": "suspend",
+        "vietnamese": "đình chỉ",
+        "phonetic": "/səˈspɛnd/",
+        "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/suspend-uk.mp3",
+        "partOfSpeech": "verb ",
+        "description": "Treo lơ lửng",
+        "createdAt": "2026-04-02T17:55:03.863Z",
+        "lessonId": 2
+      },
+      {
+        "id": 18,
+        "english": "mount",
+        "vietnamese": "gắn ",
+        "phonetic": "/maʊnt/",
+        "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/mount-us.mp3",
+        "partOfSpeech": "verb ",
+        "description": "gắn lên",
+        "createdAt": "2026-04-02T17:55:36.950Z",
+        "lessonId": 2
+      },
+      {
+        "id": 19,
+        "english": "wipe off",
+        "vietnamese": "lau sạch",
+        "phonetic": "",
+        "audioUrl": "",
+        "partOfSpeech": "verb",
+        "description": "To remove something by wiping.",
+        "createdAt": "2026-04-02T17:55:47.923Z",
+        "lessonId": 2
+      },
+      {
+        "id": 20,
+        "english": "shoved",
+        "vietnamese": "xúc",
+        "phonetic": "/ʃʌvd/",
+        "audioUrl": "",
+        "partOfSpeech": "verb",
+        "description": "",
+        "createdAt": "2026-04-02T17:56:10.230Z",
+        "lessonId": 2
+      },
+      {
+        "id": 21,
+        "english": "roll up",
+        "vietnamese": "cuộn lại",
+        "phonetic": "",
+        "audioUrl": "",
+        "partOfSpeech": "verb",
+        "description": "To make something into a particular shape, especially cylindrical or fold-like.",
+        "createdAt": "2026-04-02T17:56:30.678Z",
+        "lessonId": 2
+      },
+      {
+        "id": 22,
+        "english": "unroll",
+        "vietnamese": "trải ra",
+        "phonetic": "",
+        "audioUrl": "",
+        "partOfSpeech": "verb",
+        "description": "To straighten something that has been rolled, twisted or curled.",
+        "createdAt": "2026-04-02T17:56:43.667Z",
+        "lessonId": 2
+      },
+      {
+        "id": 23,
+        "english": "carpet",
+        "vietnamese": "thảm",
+        "phonetic": "/ˈkɑː(ɹ)pɪt/",
+        "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/carpet-uk.mp3",
+        "partOfSpeech": "noun",
+        "description": "A fabric used as a complete floor covering.",
+        "createdAt": "2026-04-02T17:56:54.634Z",
+        "lessonId": 2
+      },
+      {
+        "id": 24,
+        "english": "rug",
+        "vietnamese": "tấm thảm",
+        "phonetic": "/ɹʌɡ/",
+        "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/rug-au.mp3",
+        "partOfSpeech": "noun",
+        "description": "A partial covering for a floor.",
+        "createdAt": "2026-04-02T17:57:03.599Z",
+        "lessonId": 2
+      },
+      {
+        "id": 25,
+        "english": "tile",
+        "vietnamese": "ngói",
+        "phonetic": "/taɪl/",
+        "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/tile-uk.mp3",
+        "partOfSpeech": "noun",
+        "description": "A regularly-shaped slab of clay or other material, affixed to cover or decorate a surface, as in a roof-tile, glazed tile, stove tile, carpet tile etc.",
+        "createdAt": "2026-04-02T17:57:12.674Z",
+        "lessonId": 2
+      },
+      {
+        "id": 26,
+        "english": "hook",
+        "vietnamese": "cái móc",
+        "phonetic": "/huːk/",
+        "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/hook-au.mp3",
+        "partOfSpeech": "noun",
+        "description": "A rod bent into a curved shape, typically with one end free and the other end secured to a rope or other attachment.",
+        "createdAt": "2026-04-02T17:57:20.560Z",
+        "lessonId": 2
+      },
+      {
+        "id": 27,
+        "english": "gallery",
+        "vietnamese": "phòng tranh",
+        "phonetic": "/ˈɡæləɹi/",
+        "audioUrl": "",
+        "partOfSpeech": "noun",
+        "description": "An institution, building, or room for the exhibition and conservation of works of art.",
+        "createdAt": "2026-04-02T17:57:36.840Z",
+        "lessonId": 2
+      },
+      {
+        "id": 28,
+        "english": "check",
+        "vietnamese": "kiểm tra",
+        "phonetic": "/t͡ʃɛk/",
+        "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/check-us.mp3",
+        "partOfSpeech": "verb ",
+        "description": "kiểm tra",
+        "createdAt": "2026-04-02T17:57:55.881Z",
+        "lessonId": 2
+      },
+      {
+        "id": 29,
+        "english": "examine",
+        "vietnamese": "kiểm tra",
+        "phonetic": "/ɪɡˈzæmɪn/",
+        "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/examine-us.mp3",
+        "partOfSpeech": "verb",
+        "description": "To observe or inspect carefully or critically",
+        "createdAt": "2026-04-02T17:58:10.187Z",
+        "lessonId": 2
+      },
+      {
+        "id": 30,
+        "english": "inspect",
+        "vietnamese": "thanh tra",
+        "phonetic": "/ɪnˈspɛkt/",
+        "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/inspect-us.mp3",
+        "partOfSpeech": "verb",
+        "description": "To examine critically or carefully; especially, to search out problems or determine condition; to scrutinize.",
+        "createdAt": "2026-04-02T17:58:19.685Z",
+        "lessonId": 2
+      },
+      {
+        "id": 31,
+        "english": "review",
+        "vietnamese": "xem lại",
+        "phonetic": "/ɹɪˈvjuː/",
+        "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/review-us.mp3",
+        "partOfSpeech": "verb",
+        "description": "To survey; to look broadly over.",
+        "createdAt": "2026-04-02T17:58:33.480Z",
+        "lessonId": 2
+      },
+      {
+        "id": 32,
+        "english": "adjust",
+        "vietnamese": "điều chỉnh",
+        "phonetic": "/əˈdʒʌst/",
+        "audioUrl": "",
+        "partOfSpeech": "verb",
+        "description": "To modify.",
+        "createdAt": "2026-04-02T17:58:44.843Z",
+        "lessonId": 2
+      },
+      {
+        "id": 33,
+        "english": "case",
+        "vietnamese": "tủ",
+        "phonetic": "/keɪs/",
+        "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/case-us.mp3",
+        "partOfSpeech": "noun",
+        "description": "cái tủ",
+        "createdAt": "2026-04-02T17:59:19.494Z",
+        "lessonId": 2
+      },
+      {
+        "id": 34,
+        "english": "goods",
+        "vietnamese": "hàng hóa",
+        "phonetic": "/ɡʊdz/",
+        "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/goods-us.mp3",
+        "partOfSpeech": "noun",
+        "description": "That which is produced, then traded, bought or sold, then finally consumed.",
+        "createdAt": "2026-04-02T17:59:26.609Z",
+        "lessonId": 2
+      },
+      {
+        "id": 35,
+        "english": "product",
+        "vietnamese": "sản phẩm",
+        "phonetic": "/ˈpɹɒd.əkt/",
+        "audioUrl": "",
+        "partOfSpeech": "noun",
+        "description": "A commodity offered for sale.",
+        "createdAt": "2026-04-02T17:59:36.161Z",
+        "lessonId": 2
+      },
+      {
+        "id": 36,
+        "english": "item",
+        "vietnamese": "hàng hóa",
+        "phonetic": "[ˈaɪ̯ɾm̩]",
+        "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/item-us.mp3",
+        "partOfSpeech": "noun",
+        "description": "hàng hóa",
+        "createdAt": "2026-04-02T17:59:56.316Z",
+        "lessonId": 2
+      },
+      {
+        "id": 37,
+        "english": "potted",
+        "vietnamese": "chậu",
+        "phonetic": "",
+        "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/potted-au.mp3",
+        "partOfSpeech": "verb",
+        "description": "To put (something) into a pot.",
+        "createdAt": "2026-04-02T18:00:10.214Z",
+        "lessonId": 2
+      },
+      {
+        "id": 38,
+        "english": "bulletin board",
+        "vietnamese": "bảng thông báo",
+        "phonetic": "",
+        "audioUrl": "",
+        "partOfSpeech": "noun",
+        "description": "A board on which messages may be posted, especially one in a public space.",
+        "createdAt": "2026-04-02T18:00:31.942Z",
+        "lessonId": 2
+      },
+      {
+        "id": 39,
+        "english": "lean over",
+        "vietnamese": "nghiêng người",
+        "phonetic": "",
+        "audioUrl": "",
+        "partOfSpeech": "noun",
+        "description": "nghiêng người",
+        "createdAt": "2026-04-02T18:01:03.578Z",
+        "lessonId": 2
+      },
+      {
+        "id": 40,
+        "english": "cash register",
+        "vietnamese": "máy tính tiền",
+        "phonetic": "",
+        "audioUrl": "",
+        "partOfSpeech": "noun",
+        "description": "A machine that tabulates the amount of sales transactions, makes a permanent and cumulative record of them, and has a drawer in which cash can be kept.",
+        "createdAt": "2026-04-02T18:01:16.285Z",
+        "lessonId": 2
+      },
+      {
+        "id": 41,
+        "english": "cabinet",
+        "vietnamese": "tủ",
+        "phonetic": "/ˈkæ.bɪ.nɪt/",
+        "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/cabinet-uk.mp3",
+        "partOfSpeech": "noun",
+        "description": "A storage closet either separate from, or built into, a wall.",
+        "createdAt": "2026-04-02T18:01:48.715Z",
+        "lessonId": 2
+      },
+      {
+        "id": 42,
+        "english": "drawer",
+        "vietnamese": "ngăn kéo",
+        "phonetic": "/dɹɔː(ɹ)/",
+        "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/drawer-us.mp3",
+        "partOfSpeech": "noun",
+        "description": "An open-topped box that can be slid in and out of the cabinet that contains it, used for storing clothing or other articles.",
+        "createdAt": "2026-04-02T18:01:57.088Z",
+        "lessonId": 2
+      }
+    ]
+  }
+]
