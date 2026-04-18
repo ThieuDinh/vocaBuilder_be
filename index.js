@@ -236,6 +236,18 @@ app.get('/api/exercises', async (req, res) => {
         }))
       });
     }
+  } else if (type === 'flashcard') {
+    shuffledWords.forEach(w => {
+      exercises.push({
+        type: 'flashcard',
+        english: w.english,
+        vietnamese: w.vietnamese,
+        partOfSpeech: w.partOfSpeech,
+        phonetic: w.phonetic,
+        audioUrl: w.audioUrl,
+        description: w.description
+      });
+    });
   } else {
     return res.status(400).json({ error: 'Loại bài tập không hợp lệ.' });
   }
